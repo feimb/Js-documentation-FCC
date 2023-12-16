@@ -42,14 +42,14 @@ img{
     margin-inline-end: 0px;
     margin-inline-start: 20px;
 }
-li{
+#navbar ul li{
     height: 100%;
     width: 100%;
     border-top: 2.4px solid var(--color-white);
     margin: 6px;
     
 }
-li > a{
+#navbar ul li > a{
     text-decoration: none;
     color: var(--color-white);
     cursor: pointer;
@@ -57,8 +57,8 @@ li > a{
     font-size: 1.1rem;
     display: block;
 }
-header{
-    color: #37af65;
+#navbar header{
+    color: yellow;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.8rem;
     text-align: center;
@@ -70,20 +70,28 @@ header{
     margin-left: 280px;  
     padding: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#main-doc section{
+    margin-top: .8rem;
+}
+#main-doc section header{
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: var(--color-green);
+}
+#main-doc section article > *{
+    margin-left: 2rem;
+    margin-top: 24px;
+}
+article code{
+    display: block;
+    padding: 0.5rem;
+    margin: 15px;
+    background-color: black;
+}
+#main-doc section article ul > li {
+    margin-left: 4rem;
+    margin-top: 1.4rem;
+}
 
 @media (max-width: 900px){
     li > a {
@@ -98,7 +106,7 @@ header{
     li > a {
         padding: 6px 30px; 
     }
-    header{
+    #navbar header{
         display: none;
     }
     body .hamburger-icon{

@@ -13,37 +13,48 @@
         <header>JS Documentation</header>
         <ul>
             <li>
-                <a href="#introduccion" class="nav-link">introducion</a>
+                <a href="#introduccion" class="nav-link">Introduccion</a>
             </li>
             <li>
                 <a href="#LOYDS" class="nav-link">Lo que ya deberías saber</a>
             </li>
             <li>
-                <a href="" class="nav-link">JavaScript y Java</a>
+                <a href="#js-y-j" class="nav-link">JavaScript y Java</a>
             </li>
             <li>
-                <a href="" class="nav-link">Hola mundo</a>
+                <a href="#hello-world" class="nav-link">Hola Mundo</a>
+            </li> 
+            <li>
+                <a href="#var" class="nav-link">Variables</a>
             </li>
             <li>
-                <a href="" class="nav-link">Variables</a>
+                <a href="#de-var" class="nav-link">Declarar variables</a>
             </li>
             <li>
-                <a href="" class="nav-link">Declarar variables</a>
-            </li>
-            <li>
-                <a href="" class="nav-link">Variable scope</a>
+                <a href="#var-scope" class="nav-link">Variable scope</a>
             </li>
 
             <li>
-                <a href="" class="nav-link">Global variables</a>
+                <a href="#global-scope" class="nav-link">Global variables</a>
             </li>
             <li>
-                <a href="" class="nav-link">Constants</a>
+                <a href="#const" class="nav-link">Constants</a>
             </li>
             <li>
+                <a href="#referencia" class="nav-link">Referencia</a>
+            </li>
+           
+           
+            <!-- 
+                
+                
+                
+               <li>
                 <a href="" class="nav-link">Tipos de datos</a>
             </li>
-            <li>
+           
+            
+                <li>
                 <a href="" class="nav-link">if...else statment</a>
             </li>
 
@@ -53,19 +64,122 @@
             <li>
                 <a href="" class="nav-link">Declarar Function</a>
             </li>
-            <li>
-                <a href="" class="nav-link">Referencia</a>
-            </li>
+           -->
             
         </ul>
     </nav>
     <main id="main-doc">
-       <section id="introduccion" class="main-section">
+       <section  class="main-section" id="introduccion">
+            <header>Introduccion</header>
+            <article>
+                <p>JavaScript es un lenguaje de programación multiplataforma orientado a objetos. Es un lenguaje pequeño y liviano. Dentro de un entorno host (por ejemplo, un navegador web), JavaScript se puede conectar a los objetos de su entorno para proporcionar control programático sobre ellos.</p>
+                <p>JavaScript contiene una biblioteca estándar de objetos, como Array, Date y Math, y un conjunto central de elementos del lenguaje, como operadores, estructuras de control y declaraciones. JavaScript principal se puede ampliar para diversos fines completándolo con objetos adicionales; Por ejemplo:</p>
+                <ul>
+                    <li>JavaScript del lado del cliente amplía el lenguaje principal al proporcionar objetos para controlar un navegador y su modelo de objetos de documento (DOM). Por ejemplo, las extensiones del lado del cliente permiten que una aplicación coloque elementos en un formulario HTML y responda a eventos del usuario, como clics del mouse, entrada de formulario y navegación de página.</li>
+                    <li>Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.</li>
+                </ul>
+            </article>
+       </section>
+       <section class="main-section" id="LOYDS">
+            <header>Lo que ya deberías saber</header>
+            <article>
+                <p>Esta guía asume que usted tiene los siguientes conocimientos básicos:</p>
+                <ul>
+                    <li>Una comprensión general de Internet y la World Wide Web (WWW).</li>
+                    <li>Buen conocimiento práctico del lenguaje de marcado de hipertexto (HTML).</li>
+                    <li>Alguna experiencia en programación. Si eres nuevo en la programación, prueba uno de los tutoriales vinculados en la página principal sobre JavaScript.</li>
+                </ul>
+            </article>
+       </section>
+       <section class="main-section" id="js-y-j">
+            <header>JavaScript y Java</header>
+            <article>
+                <p>JavaScript y Java son similares en algunos aspectos pero fundamentalmente diferentes en otros. El lenguaje JavaScript se parece a Java, pero no tiene la tipificación estática ni la verificación estricta de tipos de Java. JavaScript sigue la mayoría de la sintaxis de expresiones de Java, convenciones de nomenclatura y construcciones básicas de flujo de control, razón por la cual se cambió el nombre de LiveScript a JavaScript.</p>
+                <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+                <p>JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement interfaces. Variables, parameters, and function return types are not explicitly typed.</p>
+            </article>
+       </section>
+       <section class="main-section" id="hello-world">
+            <header>Hola Mundo</header>
+            <article>
+                <p>Para comenzar a escribir JavaScript, abra el Bloc de notas y escriba su primer código JavaScript "Hola mundo":</p>
+                <code>function saludame(tuNombre) { alerta("Hola " + tuNombre); }<br>
+                    saludame("Mundo");</code>
+                <p>Seleccione el código en el teclado y presione Ctrl+R para verlo desplegarse en su navegador.</p>
+            </article>
+       </section>
+       <section class="main-section" id="var">
+            <header>Variables</header>
+            <article>
+                <p>Utilice variables como nombres simbólicos para los valores en su aplicación. Los nombres de las variables, llamados identificadores, se ajustan a ciertas reglas.</p>
+                <p>Un identificador de JavaScript debe comenzar con una letra, un guión bajo (_) o un signo de dólar ($); Los caracteres siguientes también pueden ser dígitos (0-9). Debido a que JavaScript distingue entre mayúsculas y minúsculas, las letras incluyen los caracteres "A" a "Z" (mayúsculas) y los caracteres "a" a "z" (minúsculas).</p>
+                <p>Puede utilizar ISO 8859-1 o letras Unicode como å y ü en los identificadores. También puede utilizar las secuencias de escape Unicode como caracteres en identificadores. Algunos ejemplos de nombres legales son Number_hits, temp99 y _name.
+                </p>
+            </article>
+       </section>
+       <section class="main-section" id="de-var">
+            <header>Declarar variables</header>
+            <article>
+                <p>Puedes declarar una variable de tres maneras:</p>
+                <p>Con la palabra clave var. Por ejemplo,</p>
+                <code>var x = 42.</code>
+                <p>Esta sintaxis se puede utilizar para declarar variables tanto locales como globales.</p>
+                <p>Simplemente asignándole un valor. Por ejemplo,</p>
+                <code>x = 42.</code>
+                <p>Esto siempre declara una variable global. Genera una advertencia estricta de JavaScript. No deberías usar esta variante.</p>
+                <p>Con la palabra clave let. Por ejemplo,</p>
+                <code>let y = 13.</code>
+                <p>Esta sintaxis se puede utilizar para declarar una variable local de alcance de bloque. Consulte Alcance de la variable a continuación.</p>
+            </article>
+       </section>
+       <section class="main-section" id="var-scope">
+            <header>Variable scope</header>
+            <article>
+                <p>Cuando declaras una variable fuera de cualquier función, se llama variable global porque está disponible para cualquier otro código en el documento actual. Cuando declaras una variable dentro de una función, se llama variable local porque solo está disponible dentro de esa función.</p>
+                <p>JavaScript anterior a ECMAScript 2015 no tiene alcance de declaración de bloque; más bien, una variable declarada dentro de un bloque es local para la función (o alcance global) en la que reside el bloque. Por ejemplo, el siguiente código registrará 5, porque el alcance de x es la función (o contexto global) dentro del cual se declara x, no el bloque, que en este caso es una declaración if</p>
+                <code>if (true) { var x = 5; } console.log(x); // 5</code>
+                <p>Este comportamiento cambia cuando se utiliza la declaración let introducida en ECMAScript 2015.</p>
+                <code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is<br>
+                    not defined</code>
+            </article>
+       </section>
+       <section class="main-section" id="global-scope">
+            <header>Global scope</header>
+            <article>
+                <p>Las variables globales son de hecho propiedades del objeto global. En las páginas web, el objeto global es ventana, por lo que puede configurar y acceder a variables globales utilizando la sintaxis ventana.variable.</p>
+                <p>En consecuencia, puede acceder a las variables globales declaradas en una ventana o marco desde otra ventana o marco especificando el nombre de la ventana o marco. Por ejemplo, si se declara una variable llamada número de teléfono en un documento, puede hacer referencia a esta variable desde un iframe como padre.número de teléfono.</p>
+            </article>
+       </section>
+       <section class="main-section" id="const">
+            <header>Constants</header>
+            <article>
+                <p>Puede crear una constante con nombre de solo lectura con la palabra clave const. La sintaxis de un identificador constante es la misma que la de un identificador variable: debe comenzar con una letra, un guión bajo o un signo de dólar y puede contener caracteres alfabéticos, numéricos o de guión bajo.</p>
+                <code>const PI = 3.14;</code>
+                <p>Una constante no puede cambiar su valor mediante asignación ni volver a declararse mientras se ejecuta el script. Tiene que inicializarse a un valor.</p>
+                <p>Las reglas de alcance para las constantes son las mismas que las de las variables de alcance del bloque let. Si se omite la palabra clave const, se supone que el identificador representa una variable.</p>
+                <p>You cannot declare a constant with the same name as a function or variable in the same scope. For example:</p>
+                <code>// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS <br>
+                    WILL CAUSE AN ERROR ALSO function f() { const g = 5; var g;<br>
+                    //statements }</code>
+                <p>Sin embargo, los atributos del objeto no están protegidos, por lo que la siguiente declaración se ejecuta sin problemas.</p>
+                <code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key =   "otherValue";</code>
+            </article>
+       </section>
+       <section class="main-section" id="referencia">
+            <header>Referencia</header>
+            <article>
+                <ul>
+                    <li>Toda la documentación en esta página está tomada de <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">MDN</a></li>
+                </ul>
+            </article>
+       </section>
+       <!-- <section class="main-section">
 
-       </section>
-       <section id="LOYDS" class="main-section">
-        
-       </section>
+       </section> -->
+    
+     
+       <!-- 
+      
        <section class="main-section">
 
        </section>
@@ -74,34 +188,8 @@
        </section>
        <section class="main-section">
 
-       </section>
-       <section class="main-section">
-
-       </section>
-       <section class="main-section">
-
-       </section>
-       <section class="main-section">
-
-       </section>
-       <section class="main-section">
-
-       </section>
-       <section class="main-section">
-
-       </section>
-       <section class="main-section">
-
-       </section>
-       <section class="main-section">
-
-       </section>
-       <section class="main-section">
-
-       </section>
-       <section class="main-section">
-
-       </section>
+        </section> 
+        -->
     </main>
     
 

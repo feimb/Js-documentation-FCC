@@ -2,6 +2,8 @@ const hamburgerIcon = document.querySelector(".hamburger-icon");
 const navbar = document.querySelector("#navbar");
 const links = document.querySelectorAll(".nav-link");
 
+
+
 hamburgerIcon.addEventListener("click", () => {
     if(navbar.style.display == "block"){
         navbar.style.display = "none";
@@ -9,6 +11,16 @@ hamburgerIcon.addEventListener("click", () => {
         navbar.style.display = "block";
     }
 });
-links.addEventListener("click", () =>{
-    navbar.style.display = "none";
+
+
+let ancho = window.innerWidth;
+
+links.forEach(element =>{
+    element.addEventListener("click", () =>{
+        if(ancho <= 599){
+            navbar.style.display = "none";
+        }
+        
+
+    })
 })
